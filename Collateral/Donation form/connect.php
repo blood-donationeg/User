@@ -19,10 +19,11 @@ if ($conn->connect_error) {
     die("Connection Failed : " . $conn->connect_error);
 } else {
     $stmt = $conn->prepare("insert into registration(firstName, lastName, email, number, age, governorate, city, gender, bloodType, comment, contact) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssiissssss", $firstName, $lastName, $email, $number, $age, $governorate, $city, $gender, $bloodType, $comment, $contact);
+    $stmt->bind_param("ssssissssss", $firstName, $lastName, $email, $number, $age, $governorate, $city, $gender, $bloodType, $comment, $contact);
     $execval = $stmt->execute();
-    echo $execval;
+
     echo "Your information has been successfully registered, Thank you";
+    header("Location: /HTML/Collateral/Donation form/Welcome.html");
     $stmt->close();
     $conn->close();
 }
