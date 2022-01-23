@@ -23,7 +23,7 @@
   background-color: #dee2e6;
 }
 .btnc {
-  background-color: #0b525b;
+  background-color: #d8d8d8;
 }
 .loc {
   background-color: #1b4332;
@@ -59,4 +59,16 @@
 .navbar a.current,
 .navbar a:hover {
   font-weight: bold;
+}
+.bloodtype {
+  background: url("/HTML/Images/bloodtypes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+.database {
+  background: url("/HTML/Images/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
 }

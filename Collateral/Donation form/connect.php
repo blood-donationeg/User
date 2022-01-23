@@ -8,7 +8,6 @@ $governorate = $_POST['governorate'];
 $city = $_POST['city'];
 $gender = $_POST['gender'];
 $bloodType = $_POST['bloodType'];
-$comment = $_POST['comment'];
 $contact = $_POST['contact'];
 
 
@@ -18,8 +17,8 @@ if ($conn->connect_error) {
     echo "$conn->connect_error";
     die("Connection Failed : " . $conn->connect_error);
 } else {
-    $stmt = $conn->prepare("insert into registration(firstName, lastName, email, number, age, governorate, city, gender, bloodType, comment, contact) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssissssss", $firstName, $lastName, $email, $number, $age, $governorate, $city, $gender, $bloodType, $comment, $contact);
+    $stmt = $conn->prepare("insert into registration(firstName, lastName, email, number, age, governorate, city, gender, bloodType, contact) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssisssss", $firstName, $lastName, $email, $number, $age, $governorate, $city, $gender, $bloodType, $contact);
     $execval = $stmt->execute();
 
     echo "Your information has been successfully registered, Thank you";

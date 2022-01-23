@@ -9,8 +9,8 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/HTML/CSS/Donation-style.css" />
     <link rel="stylesheet" href="/HTML/CSS/Style.css" />
+    <link rel="stylesheet" href="/HTML/CSS/Donation-style.css" />
     <link
       rel="icon"
       type="image/png"
@@ -170,7 +170,7 @@
           <!-- Phone Number -->
           <div class="horizontal-group">
             <div class="from-group right">
-              <label for="phone" class="label-title">Phone Number*</label>
+              <label for="phone" class="label-title">Phone number*</label>
               <input
                 type="tel"
                 id="phone"
@@ -184,7 +184,7 @@
           <!-- Age -->
 
           <div class="form-group left">
-            <label for="age" class="label-title">Age</label>
+            <label for="age" class="label-title">Age*</label>
             <input
               type="number"
               name="age"
@@ -192,6 +192,7 @@
               max="76"
               value="18"
               class="form-input"
+              required
             />
           </div>
 
@@ -227,12 +228,12 @@
             <div class="form-group left">
               <label class="label-title">Gender:</label>
               <div class="input-group">
-                <label for="male">
+                <label for="male" class="pt-2">
                   <input type="radio" name="gender" value="male" id="male" />
                   Male</label
                 >
 
-                <label for="female">
+                <label for="female" class="pt-2">
                   <input
                     type="radio"
                     name="gender"
@@ -247,7 +248,7 @@
             <!-- Blood Type -->
             <div class="horizontal-group">
               <div class="form-group left">
-                <label class="label-title">Blood Group</label>
+                <label class="label-title">Blood type</label>
                 <select class="form-input" id="level" name="bloodType">
                   <option value="A+">A+</option>
                   <option value="A-">A-</option>
@@ -261,18 +262,6 @@
               </div>
             </div>
 
-            <!-- Comments -->
-            <div class="form-group">
-              <label for="comments" class="label-title">Comments</label>
-              <textarea
-                class="form-input"
-                name="comment"
-                rows="4"
-                cols="50"
-                style="height: auto"
-              ></textarea>
-            </div>
-
             <!-- Contact -->
 
             <div class="from-group">
@@ -281,7 +270,7 @@
                 blood type?</label
               >
               <div class="input-group">
-                <label class="me-5 my-3" for="yes">
+                <label class="me-4 my-3" for="yes">
                   <input type="radio" name="contact" value="yes" id="yes" />
                   Yes</label
                 >
